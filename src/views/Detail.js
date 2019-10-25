@@ -115,9 +115,7 @@ class Detail extends Component {
               <FastImage
                 style={style.avatar}
                 source={{ uri: this.state.user.profile_image.medium }}
-                activityIndicatorProps={{
-                  resizeMode: "center"
-                }}
+                resizeMode={FastImage.resizeMode.cover}
               />
             </View>
             <View style={style.boxInfoUser}>
@@ -168,9 +166,7 @@ class Detail extends Component {
               <FastImage
                 style={style.imageDetail}
                 source={{ uri }}
-                activityIndicatorProps={{
-                  resizeMode: "center"
-                }}
+                resizeMode={FastImage.resizeMode.cover}
               />
             </TouchableWithoutFeedback>
           </Transition>

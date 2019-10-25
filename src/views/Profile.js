@@ -38,9 +38,7 @@ class Profile extends Component {
           <FastImage
             style={style.avatarProfile}
             source={{ uri: this.state.user.profile_image.medium }}
-            activityIndicatorProps={{
-              resizeMode: "center"
-            }}
+            resizeMode={FastImage.resizeMode.cover}
           />
           <View style={style.boxInfoUserProfile}>
             <View style={style.boxInfoUserNameProfile}>

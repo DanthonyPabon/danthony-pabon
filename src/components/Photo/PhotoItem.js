@@ -86,7 +86,7 @@ class PhotoItem extends Component {
       <View>
         {top}
         <TouchableWithoutFeedback onPress={() => this.Detail()}>
-          <View>
+          <View style={style.boxImageItem}>
             <Transition shared={this.state.photo.urls.regular}>
               <FastImage
                 style={style.imageItem}
@@ -96,9 +96,9 @@ class PhotoItem extends Component {
                   height: this._photoSize
                 }}
                 activityIndicatorProps={{
-                  color: COLOR_PRIMARY,
-                  resizeMode: "center"
+                  color: COLOR_PRIMARY
                 }}
+                resizeMode={FastImage.resizeMode.cover}
               />
             </Transition>
             {this.gradient()}

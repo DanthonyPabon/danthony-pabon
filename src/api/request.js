@@ -10,7 +10,7 @@ const unsplash = new Unsplash({
 
 export async function Photos() {
   const response = await unsplash.photos
-    .listPhotos(1, 6, "latest")
+    .listPhotos(1, 12, "latest")
     .then(toJson)
     .then(json => json)
     .catch(() => {

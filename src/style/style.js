@@ -166,6 +166,13 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
+  boxImageItem: {
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+    elevation: 5
+  },
   boxInfo: {
     flexDirection: "row",
     width: "100%",
