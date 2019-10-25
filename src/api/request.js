@@ -1,9 +1,11 @@
 import Unsplash, { toJson } from "unsplash-js/native";
 
 const unsplash = new Unsplash({
-  applicationId:
-    "a2f508640cb62f314e0e0763594d40aab1c858a7ef796184067c537a88b276aa",
-  secret: "4ea19af370997bcb0c580c071437661346b073b8e2f5252871e171ecc3c783ee"
+  accessKey: "48b6f17aca6c4b92689dc676201e4cb36a3561f61e26a818fd84b929049dc779",
+  secret: "9dbd527e3cbb8d996e548f56e0d99dc93a85506386bbba17d162af0877dbaf65",
+  headers: {
+    "X-Custom-Header": "foo"
+  }
 });
 
 export async function Photos() {
