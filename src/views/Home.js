@@ -1,5 +1,7 @@
 import React, { Component } from "react"; 
-import { View, Text } from "react-native"; 
+import { View, Text } from "react-native";
+import { connect } from "react-redux";
+import { getPhotos } from "../actions"
 import style from "../style/style"; 
  
 class Home extends Component { 
@@ -20,5 +22,13 @@ class Home extends Component {
     ); 
   } 
 } 
- 
-export default Home; 
+
+const mapStateToProps = ({ gallery }) => {
+  const { photos } = gallery;
+  return { photos };
+};
+
+export default connect(
+  mapStateToProps,
+  { getPhotos }
+)(Home);
