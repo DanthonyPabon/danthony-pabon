@@ -32,5 +32,11 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "author": "Danthony Pabon",
+  "rnpm": {
+    "assets": [
+      "./src/fonts"
+    ]
   }
 }
