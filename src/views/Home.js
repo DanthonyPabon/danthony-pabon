@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-import {
-  View,
-  Text,
-  SafeAreaView,
-  ActivityIndicator,
-} from "react-native";
+import { View, Text, SafeAreaView, ActivityIndicator } from "react-native";
 import { connect } from "react-redux";
 import { getPhotos } from "../actions";
 import { Photos } from "../api/request";
@@ -38,10 +33,7 @@ class ListMain extends Component {
   }
 
   isRender() {
-    if (
-      Object.keys(this.state.photos).length === 0 &&
-      this.state.loading == true
-    ) {
+    if (Object.keys(this.state.photos).length === 0 && this.state.loading == true) {
       return (
         <View style={style.boxLoading}>
           <ActivityIndicator
