@@ -1,14 +1,18 @@
-import { StyleSheet } from "react-native";
-import { COLOR_BACKGROUND } from "./common.js";
+import { StyleSheet, Dimensions, Platform } from "react-native";
+import { COLOR_BACKGROUND, COLOR_TERTIARY, COLOR_FOURTH } from "./common.js";
 
 export default StyleSheet.create({
   all: {
-    //Review MAIN
     flex: 1,
     backgroundColor: COLOR_BACKGROUND
   },
+  containerHome: {
+    flex: 1,
+    marginLeft: 10,
+    marginRight: 10,
+    alignItems: "flex-start"
+  },
   containerProfile: {
-    //Review MAIN
     flex: 1,
     marginTop: 20,
     marginLeft: 10,
@@ -16,7 +20,6 @@ export default StyleSheet.create({
     alignItems: "center"
   },
   containerDetail: {
-    //Review MAIN
     flex: 1,
     marginRight: 15,
     marginLeft: 15,
@@ -33,6 +36,23 @@ export default StyleSheet.create({
     padding: 10,
     marginBottom: 15
   },
+  mainBarProfile: {
+    justifyContent: "flex-end",
+    alignItems: "flex-start",
+    backgroundColor: COLOR_FOURTH,
+    width: "100%",
+    left: "8%",
+    marginTop: 38,
+    marginBottom: 15
+  },
+  iconMenu: {
+    position: "absolute",
+    alignSelf: "center",
+    alignItems: "center",
+    width: 25,
+    height: 12,
+    left: "5%"
+  },
   iconBack: {
     width: 50,
     height: 50,
@@ -42,7 +62,19 @@ export default StyleSheet.create({
     top: "10%",
     left: "8%"
   },
+  iconBackProfile: {
+    width: 50,
+    height: 50,
+    alignItems: "center",
+    top: "5%",
+    left: "8%"
+  },
   photosList: {
+    flex: 1,
+    width: "100%",
+    paddingTop: 3
+  },
+  photosListProfile: {
     flex: 1,
     width: "100%",
     paddingTop: 3
@@ -50,6 +82,11 @@ export default StyleSheet.create({
   avatar: {
     width: 58,
     height: 58,
+    borderRadius: Platform.OS === "ios" ? 50 : 50
+  },
+  avatarProfile: {
+    width: 70,
+    height: 70,
     borderRadius: Platform.OS === "ios" ? 50 : 50
   },
   imageItem: {
@@ -68,6 +105,11 @@ export default StyleSheet.create({
     color: "#000000",
     alignSelf: "center",
     alignItems: "center",
+    fontSize: 34
+  },
+  txtTitleProfile: {
+    fontFamily: "MuseoSans-900",
+    color: "#000000",
     fontSize: 34
   },
   txtTitlePhoto: {
@@ -90,8 +132,13 @@ export default StyleSheet.create({
     color: "#333",
     fontSize: 20
   },
-  mainBar: {
-    //Review MAIN
+  txtViewProfile: {
+    fontFamily: "MuseoSans-100",
+    color: "#333",
+    fontSize: 10,
+    textAlign: "justify",
+    flexWrap: "wrap"
+  },
   txtView: {
     fontFamily: "MuseoSans-100",
     color: COLOR_FOURTH,
@@ -106,6 +153,13 @@ export default StyleSheet.create({
     color: COLOR_FOURTH,
     fontSize: 22
   },
+  boxInfoContainer: {
+    flex: 1,
+    flexDirection: "column",
+    top: "5%",
+    paddingLeft: 32,
+    paddingRight: 32
+  },
   boxLoading: {
     flex: 1,
     width: "100%",
@@ -118,7 +172,12 @@ export default StyleSheet.create({
     height: 80,
     marginBottom: 10
   },
+  boxMy: { marginTop: 26, marginLeft: 26, marginBottom: 10 },
+  boxInfoProfile: {
     flexDirection: "row",
+    marginLeft: 26,
+    marginRight: 26
+  },
   boxInfoDetail: {
     padding: 35,
     width: "100%",
@@ -128,12 +187,42 @@ export default StyleSheet.create({
     width: "100%",
     justifyContent: "flex-start"
   },
+  boxInfoUserNameProfile: {
+    width: "100%",
+    justifyContent: "flex-start",
+    flexWrap: "wrap",
+    marginBottom: 6
+  },
+  boxInfoUserBio: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    flexWrap: "wrap"
+  },
   boxInfoUser: {
     flex: 1,
     width: "100%",
     height: "100%",
     flexDirection: "column",
     justifyContent: "space-evenly"
+  },
+  boxInfoUserProfile: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    flexDirection: "column",
+    flexWrap: "wrap",
+    marginLeft: 10
+  },
+  boxAvatar: {
+    flex: 0.32,
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "flex-start"
+  },
+  boxAvatarProfile: {
+    justifyContent: "flex-start",
+    alignItems: "flex-start"
   },
   boxInfoPhoto: {
     marginBottom: 2.5,
@@ -156,9 +245,6 @@ export default StyleSheet.create({
     width: "100%",
     bottom: 0
   },
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "white",
   boxGradientItem: {
     flex: 1,
     width: "100%",
